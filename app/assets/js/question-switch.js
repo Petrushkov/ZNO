@@ -5,22 +5,36 @@ const answerButton = document.getElementById('answer-button');
 
 let questionCounter = 1;
 
-const goToNextQuestion = (id) => {
-    counter.innerText = `Вопрос ${id} из ${questions.length}`;
-    image.setAttribute('src', `../images/q-${id}.png`);
-}
+const goToNextQuestion = id => {
+  counter.innerText = `Вопрос ${id} из ${questions.length}`;
+  image.setAttribute('src', `./assets/images/q-${id}.png`);
+};
 
-questions.forEach( el => el.addEventListener('click', (e) => {
+questions.forEach(el =>
+  el.addEventListener('click', e => {
     e.preventDefault();
     goToNextQuestion(e.target.id);
-}));
+  }),
+);
 
 window.addEventListener('load', () => {
-    counter.innerText = `Вопрос 1 из ${questions.length}`;
+  counter.innerText = `Вопрос 1 из ${questions.length}`;
 });
 
-answerButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    questionCounter++;
-    goToNextQuestion(questionCounter);
+answerButton.addEventListener('click', e => {
+  e.preventDefault();
+  questionCounter++;
+  goToNextQuestion(questionCounter);
 });
+
+function showMe(box) {
+  var chboxs = document.getElementsByName('chooseone');
+  var vis = 'hidden';
+  for (var i = 0; i < chboxs.length; i++) {
+    if (chboxs[i].checked) {
+      vis = 'visible';
+      break;
+    }
+  }
+  document.getElementById(box).style.visibility = vis;
+}
