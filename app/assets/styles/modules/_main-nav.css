@@ -1,0 +1,21 @@
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  background: #f0ebdf;
+
+  &__item {
+    flex-basis: 15%;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+
+    &:hover {
+      border-bottom: 2px solid #ea8859;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+  }
+}
