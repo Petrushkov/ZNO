@@ -14,14 +14,10 @@
   &__image {
     margin-top: 30px;
   }
+  
   &__submit {
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
-
-    submit input[disabled] {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
   }
 }

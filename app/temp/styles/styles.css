@@ -519,9 +519,6 @@ input[type='submit'] {
 }
   }
 
-.btn_questions {
-}
-
 .btn-full:link,
 .btn-full:visited,
 input[type='submit'] {
@@ -567,10 +564,6 @@ input[type='submit']:active {
   font-weight: bold;
   text-transform: uppercase;
   border: 2px solid #252c3f;
-}
-
-.btn_questions {
-  visibility: hidden;
 }
 
 .main-nav {
@@ -821,11 +814,6 @@ input[type='submit']:active {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-
-.questions__submit submit input[disabled] {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
 
 .answers__choice {
     display: none;

@@ -8,6 +8,10 @@ function TestSlider(questions) {
   let questionCounter = 1;
 
   this.goToQuestionAtId = id => {
+    if (id > questions.length) {
+      id = 1;
+    }
+    questionCounter = id;
     counter.innerText = `Вопрос ${id} из ${questions.length}`;
     image.setAttribute('src', `./assets/images/q-${id}.png`);
   };
@@ -27,28 +31,36 @@ function TestSlider(questions) {
     });
 
     answerButton.addEventListener('click', e => {
+      if(answerButton.disabled) {
+        return;
+      }
       e.preventDefault();
       questionCounter++;
       this.clearBoxes();
       this.goToQuestionAtId(questionCounter);
+      answerButton.disabled = true;
     });
 
     radioAnswers.addEventListener('click', e => {
-      this.showMe('answer-button');
+      this.activateAnswerButton('answer-button');
     });
   };
 
-  this.showMe = box => {
-    let vis = 'hidden';
+  this.hideAnswerButton = (box) => {
+    document.getElementById(box).style.visibility = 'hidden';
+  }
+
+  this.activateAnswerButton = box => {
     for (let i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i].checked) {
-        vis = 'visible';
+        document.getElementById(box).disabled = false;
+        // document.getElementById(box).classList.remove = 'passive';
+        // document.getElementById(box).classList.add = 'active';
         break;
       }
     }
-    document.getElementById(box).style.visibility = vis;
   };
-
+  
   this.clearBoxes = () => {
     for (let i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i].checked) {
