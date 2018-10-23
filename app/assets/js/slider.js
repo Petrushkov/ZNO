@@ -24,8 +24,6 @@ function Slider(elementClass) {
       this.slideIndex = this.slides.length;
     }
 
-    // slides[i].style.backgroundImage = 'url(`img-${this.slideIndex}`)';
-
     this.slides[this.slideIndex - 1].style.display = 'block';
   };
 }
