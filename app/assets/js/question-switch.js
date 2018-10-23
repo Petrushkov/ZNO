@@ -13,15 +13,13 @@ function TestSlider(questions) {
   };
 
   this.plusQuestion = () => {
-    console.log(questionCounter);
     this.goToQuestionAtId(questionCounter);
-  }
+  };
 
   this.initializeListeners = () => {
     questionContainer.addEventListener('click', e => {
       e.preventDefault();
       this.goToQuestionAtId(e.target.id);
-      console.log(e.target.id);
     });
 
     window.addEventListener('load', () => {
@@ -38,7 +36,6 @@ function TestSlider(questions) {
     radioAnswers.addEventListener('click', e => {
       this.showMe('answer-button');
     });
-
   };
 
   this.showMe = box => {
@@ -50,7 +47,7 @@ function TestSlider(questions) {
       }
     }
     document.getElementById(box).style.visibility = vis;
-  }
+  };
 
   this.clearBoxes = () => {
     for (let i = 0; i < checkboxes.length; i++) {
@@ -59,5 +56,5 @@ function TestSlider(questions) {
         break;
       }
     }
-  }
+  };
 }
