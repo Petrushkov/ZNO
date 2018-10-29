@@ -4,8 +4,12 @@ function TestSlider(questions) {
   const image = document.querySelector('.questions__image');
   const answerButton = document.getElementById('answer-button');
   const checkboxes = document.getElementsByClassName('answers__choice');
-  const radioAnswers = document.querySelector('.answers');
+  const radioContainer = document.querySelector('.answers');
   let questionCounter = 1;
+
+  let numberOfRightAnswers = 0;
+  let answers = [];
+
 
   this.goToQuestionAtId = id => {
     if (id > questions.length) {
@@ -35,13 +39,16 @@ function TestSlider(questions) {
         return;
       }
       e.preventDefault();
+      const radioAnswers = Array.from(radioContainer.children );
+      console.log(radioAnswers);
+
       questionCounter++;
       this.clearBoxes();
       this.goToQuestionAtId(questionCounter);
       answerButton.disabled = true;
     });
 
-    radioAnswers.addEventListener('click', e => {
+    radioContainer.addEventListener('click', e => {
       this.activateAnswerButton('answer-button');
     });
   };
