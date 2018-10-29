@@ -31,7 +31,7 @@ function TestSlider(questions) {
     });
 
     answerButton.addEventListener('click', e => {
-      if(answerButton.disabled) {
+      if (answerButton.disabled) {
         return;
       }
       e.preventDefault();
@@ -46,21 +46,21 @@ function TestSlider(questions) {
     });
   };
 
-  this.hideAnswerButton = (box) => {
+  this.hideAnswerButton = box => {
     document.getElementById(box).style.visibility = 'hidden';
-  }
+  };
 
   this.activateAnswerButton = box => {
     for (let i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i].checked) {
         document.getElementById(box).disabled = false;
-        // document.getElementById(box).classList.remove = 'passive';
-        // document.getElementById(box).classList.add = 'active';
+        document.getElementById(box).classList.remove('questions__answer_passsive');
+        document.getElementById(box).classList.add('questions__answer_active');
         break;
       }
     }
   };
-  
+
   this.clearBoxes = () => {
     for (let i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i].checked) {

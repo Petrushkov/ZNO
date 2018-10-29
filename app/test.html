@@ -3,7 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dimas Project</title>
+  <title>Тестування</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link rel="stylesheet" href="./temp/styles/styles.css">
 </head>
@@ -12,19 +12,19 @@
   <header class="header">
     <ul class="main-nav">
       <li class="main-nav__item">
-        <a href="index.html" class="main-nav__link">Главная</a>
+        <a href="index.html" class="main-nav__link">Головна</a>
       </li>
       <li class="main-nav__item">
-        <a href="" class="main-nav__link">Новости</a>
+        <a href="" class="main-nav__link">Новини</a>
       </li>
       <li class="main-nav__item">
-        <a href="" class="main-nav__link">Войти</a>
+        <a href="" class="main-nav__link">Увійти</a>
       </li>
     </ul>
   </header>
 
   <div class="test-container">
-    <h2 class="hero-container__heading">Онлайн тест по математике</h2>
+    <h2 class="hero-container__heading">Онлайн тест по математиці</h2>
     <ul class="test-nav">
       <li class="test-nav__item">
         <a href="" class="test-nav__link" id='1'>1</a>
@@ -55,36 +55,40 @@
       </li>
     </ul>
     <div class="questions">
-      <div class="questions__counter">Вопрос 1 из
+      <div class="questions__counter">Вопрос 1 з
       </div>
       <img class="questions__image js-slide-1" src="./assets/images/q-1.png" alt="Перше запитання">
-      <div class="questions__hint"> Ответы:</div>
+      <div class="questions__hint"> Відповіді:</div>
       <div class="answers">
-        <label class="answers__label">
-          <input class="answers__choice" type="radio" name="chooseone" value="1">
+        <input class="answers__choice" type="radio" name="chooseone" id='ans-1' value="1">
+        <label class="answers__label" for='ans-1'>
           <span class="answers__choice-custom"></span>
         </label>
-        <label class="answers__label">
-          <input class="answers__choice" type="radio" name="chooseone" value="2">
+
+        <input class="answers__choice" type="radio" name="chooseone" id='ans-2' value="2">
+        <label class="answers__label" for='ans-2'>
           <span class="answers__choice-custom"></span>
         </label>
-        <label class="answers__label">
-          <input class="answers__choice" type="radio" name="chooseone" value="3">
+
+        <input class="answers__choice" type="radio" name="chooseone" id='ans-3' value="3">
+        <label class="answers__label" for='ans-3'>
           <span class="answers__choice-custom"></span>
         </label>
-        <label class="answers__label">
-          <input class="answers__choice" type="radio" name="chooseone" value="4">
+
+        <input class="answers__choice" type="radio" name="chooseone" id='ans-4' value="4">
+        <label class="answers__label" for='ans-4'>
           <span class="answers__choice-custom"></span>
         </label>
-        <label class="answers__label">
-          <input class="answers__choice" type="radio" name="chooseone" value="5">
+
+        <input class="answers__choice" type="radio" name="chooseone" id='ans-5' value="5">
+        <label class="answers__label" for='ans-5'>
           <span class="answers__choice-custom"></span>
         </label>
       </div>
 
       <div class="questions__submit js-questions-submit">
-        <button id='answer-button' disabled class="btn btn-full btn_questions" href="#">Ответить</button>
-        <a class="btn btn-full" href="#">Завершить тест</a>
+        <button class="btn questions__answer questions__answer_passsive" id='answer-button' disabled href="#">Відповісти</button>
+        <a class="btn btn-full" href="#">Завершити тест</a>
       </div>
     </div>
   </div>
