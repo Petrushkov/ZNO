@@ -1,6 +1,6 @@
 .slideshow-container {
   position: relative;
-  margin: 0 auto;
+  margin: 0px auto;
   height: 70vh;
   &_static {
     position: static;
@@ -14,18 +14,18 @@
   display: none;
   animation: fade 1.1s forwards;
   width: 100%;
-  background-image: url('img-1.jpg');
+  background-image: url('./img-1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   &_hero {
-    height: 70vh;
+    height: 72.7vh;
 
     @mixin atSmall {
-      height: 40vh;
+      height: 72.7vh;
     }
 
     @mixin atMedium {
-      height: 55vh;
+      height: 72.7vh;
     }
 
     @mixin atLarge {

@@ -3,7 +3,8 @@
   width: 50vw;
   padding: 15px;
   margin-top: 20px;
-  border: 2px solid black;
+  background-color: #ffffff;
+  border: 1px solid #000515;
 
   &__counter {
     position: absolute;
@@ -14,10 +15,24 @@
   &__image {
     margin-top: 30px;
   }
-  
+
   &__submit {
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
   }
+  &__answer {
+    padding: 8px 20px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: all 0.4s;
+    background-color: #252c3f;
+    border: 1px solid #252c3f;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+.questions__answer_passsive {
+  cursor: not-allowed;
 }

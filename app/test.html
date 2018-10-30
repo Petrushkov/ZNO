@@ -3,95 +3,236 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dimas Project</title>
+  <title>Тестування</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./temp/styles/styles.css">
 </head>
 
 <body>
   <header class="header">
-    <ul class="main-nav">
-      <li class="main-nav__item">
-        <a href="index.html" class="main-nav__link">Главная</a>
-      </li>
-      <li class="main-nav__item">
-        <a href="" class="main-nav__link">Новости</a>
-      </li>
-      <li class="main-nav__item">
-        <a href="" class="main-nav__link">Войти</a>
-      </li>
-    </ul>
+    <nav class="main-nav">
+      <a href="#/" class="burger-nav"></a>
+
+      <ul class="main-list">
+        <li class="main-list__button">
+          <a class="main-list__link" href="index.html">Головна</a>
+        </li>
+
+        <li class="main-list__button">
+          <a class="main-list__link" href="#/">Новини</a>
+        </li>
+      </ul>
+    </nav>
   </header>
+  <div class="testbg">
+    <div class="test-container">
+      <h2 class="hero-container__heading">Онлайн тест по математиці</h2>
+      <ul class="test-nav">
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='1'>1</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='2'>2</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='3'>3</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='4'>4</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='5'>5</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='6'>6</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="index.html" class="test-nav__link" id='7'>7</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='8'>8</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='9'>9</a>
+        </li>
 
-  <div class="test-container">
-    <h2 class="hero-container__heading">Онлайн тест по математике</h2>
-    <ul class="test-nav">
-      <li class="test-nav__item">
-        <a href="" class="test-nav__link" id='1'>1</a>
-      </li>
-      <li class="test-nav__item">
-        <a href="" class="test-nav__link" id='2'>2</a>
-      </li>
-      <li class="test-nav__item">
-        <a href="" class="test-nav__link" id='3'>3</a>
-      </li>
-      <li class="test-nav__item">
-        <a href="" class="test-nav__link" id='4'>4</a>
-      </li>
-      <li class="test-nav__item">
-        <a href="" class="test-nav__link" id='5'>5</a>
-      </li>
-      <li class="test-nav__item">
-        <a href="" class="test-nav__link" id='6'>6</a>
-      </li>
-      <li class="test-nav__item">
-        <a href="index.html" class="test-nav__link" id='7'>7</a>
-      </li>
-      <li class="test-nav__item">
-        <a href="" class="test-nav__link" id='8'>8</a>
-      </li>
-      <li class="test-nav__item">
-        <a href="" class="test-nav__link" id='9'>9</a>
-      </li>
-    </ul>
-    <div class="questions">
-      <div class="questions__counter">Вопрос 1 из
-      </div>
-      <img class="questions__image js-slide-1" src="./assets/images/q-1.png" alt="Перше запитання">
-      <div class="questions__hint"> Ответы:</div>
-      <div class="answers">
-        <label class="answers__label">
-          <input class="answers__choice" type="radio" id='answer-1' name="chooseone" value="1">
-          <span class="answers__choice-custom"></span>
-        </label>
-        <label class="answers__label">
-          <input class="answers__choice" type="radio" id='answer-2' name="chooseone" value="2">
-          <span class="answers__choice-custom"></span>
-        </label>
-        <label class="answers__label">
-          <input class="answers__choice" type="radio" id='answer-3' name="chooseone" value="3">
-          <span class="answers__choice-custom"></span>
-        </label>
-        <label class="answers__label">
-          <input class="answers__choice" type="radio" id='answer-4' name="chooseone" value="4">
-          <span class="answers__choice-custom"></span>
-        </label>
-        <label class="answers__label">
-          <input class="answers__choice" type="radio" id='answer-5' name="chooseone" value="5">
-          <span class="answers__choice-custom"></span>
-        </label>
-      </div>
+        <!-- <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='10'>10</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='11'>11</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='12'>12</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='13'>13</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='14'>14</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='15'>15</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='16'>16</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='17'>17</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='18'>18</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='19'>19</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='20'>20</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='21'>21</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='22'>22</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='23'>23</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='24'>24</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='25'>25</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='26'>26</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='27'>27</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='28'>28</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='29'>29</a>
+        </li>
+        <li class="test-nav__item">
+          <a href="" class="test-nav__link" id='30'>30</a>
+        </li> -->
+      </ul>
 
-      <div class="questions__submit js-questions-submit">
-        <button id='answer-button' disabled class="btn btn-full btn_questions" href="#">Ответить</button>
-        <a class="btn btn-full" href="#">Завершить тест</a>
+      <div class="questions">
+        <div class="questions__counter">Вопрос 1 з
+        </div>
+        <img class="questions__image js-slide-1" src="./assets/images/q-1.png" alt="Перше запитання">
+        <div class="questions__hint"> Відповіді:</div>
+        <div class="answers">
+          <input class="answers__choice" type="radio" name="chooseone" id='ans-1' value="1">
+          <label class="answers__label" for='ans-1'>
+            <span class="answers__choice-custom"></span>
+          </label>
+
+          <input class="answers__choice" type="radio" name="chooseone" id='ans-2' value="2">
+          <label class="answers__label" for='ans-2'>
+            <span class="answers__choice-custom"></span>
+          </label>
+
+          <input class="answers__choice" type="radio" name="chooseone" id='ans-3' value="3">
+          <label class="answers__label" for='ans-3'>
+            <span class="answers__choice-custom"></span>
+          </label>
+
+          <input class="answers__choice" type="radio" name="chooseone" id='ans-4' value="4">
+          <label class="answers__label" for='ans-4'>
+            <span class="answers__choice-custom"></span>
+          </label>
+
+          <input class="answers__choice" type="radio" name="chooseone" id='ans-5' value="5">
+          <label class="answers__label" for='ans-5'>
+            <span class="answers__choice-custom"></span>
+          </label>
+        </div>
+
+        <div class="questions__submit js-questions-submit">
+          <button class="btn questions__answer questions__answer_passsive" id='answer-button' disabled href="#">Відповісти</button>
+          <a class="btn btn-full" href="#">Завершити тест</a>
+        </div>
       </div>
     </div>
   </div>
+  <div class="section-social-media">
+    <h3 class="media-heading">Підписуйтесь на нас</h2>
+      <ul class="media-list">
+        <li class="media-link">
+          <a class="media-link__elem" href="#/">
+            <i class="media-link__elem_icon-big media-link__elem_icon-fb icon ion-logo-facebook"></i>
+          </a>
+        </li>
+        <li class="media-link">
+          <a class="media-link__elem" href="#/">
+            <i class="media-link__elem_icon-big media-link__elem_icon-twitter icon ion-logo-twitter"></i>
+          </a>
+        </li>
+        <li class="media-link">
+          <a class="media-link__elem" href="#/">
+            <i class="media-link__elem_icon-big media-link__elem_icon-inst icon ion-logo-instagram"></i>
+          </a>
+        </li>
+      </ul>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-nav">
+      <ul class="footer-list footer-list_wide">
+        <div class="list-container">
+          <h4 class="list-container__heading">Навігація</h4>
+          <ul class="footer-list footer-list_wide footer-list_vertical">
+            <li>
+              <a class="footer-list__link" href="index.html">Перейти на головну</a>
+            </li>
+            <li>
+              <a class="footer-list__link" href="#/">Переглянути новини</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="list-container">
+          <h4 class="list-container__heading">Сайти про ЗНО</h4>
+          <ul class="footer-list footer-list_wide footer-list_vertical">
+            <li>
+              <a class="footer-list__link" href="http://testportal.gov.ua/" target="_blank">Центр Оцінювання</a>
+            </li>
+            <li>
+              <a class="footer-list__link" href="https://osvita.ua/test/training/" target="_blank">Підготовка до ЗНО</a>
+            </li>
+            <li>
+              <a class="footer-list__link" href="http://abit-poisk.org.ua/" target="_blank">Пошук абітурієнтів</a>
+            </li>
+          </ul>
+        </div>
+        <div class="list-container">
+          <h4 class="list-container__heading">Контакти</h4>
+          <ul class="footer-list footer-list_wide footer-list_vertical">
+            <li>
+              <a class="footer-list__link" href="tel:050233433" target="_blank">050233433</a>
+            </li>
+            <li>
+              <a class="footer-list__link" href="mailto:math-test@gmail.com" target="_blank">math-test@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+    <p class="footer__info">Розроблено студентами кафедри ІТПЕТ ОНПУ</p>
+  </footer>
 
   <script src="./assets/js/tests.js" defer></script>
   <script src="./assets/js/question-switch.js" defer></script>
   <script src="./assets/js/question-switch-index.js" defer></script>
+  <script src="./assets/js/main.js"></script>
 
 </body>
 

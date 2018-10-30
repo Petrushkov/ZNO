@@ -10,5 +10,7 @@
 @import 'modules/_questions';
 @import 'modules/_answers';
 @import 'modules/_test-container';
-
-/* @import 'modules/_footer.css'; */
+@import 'modules/_footer.css';
+@import 'modules/_section-social-media.css';
+@import 'modules/_features.css';
+@import 'modules/_mobile-nav.css';
