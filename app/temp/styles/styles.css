@@ -809,6 +809,10 @@ input[type='submit']:active {
   }
   }
 
+.hero-container__heading_up {
+      margin: 50px auto 25px auto;
+    }
+
 .hero-container__heading_contacts {
     color: #eb7f00;
   }
@@ -853,6 +857,7 @@ input[type='submit']:active {
   width: 50vw;
   padding: 15px;
   margin-top: 20px;
+  background-color: #ffffff;
   border: 1px solid #000515;
 }
 
@@ -915,7 +920,9 @@ input[type='submit']:active {
   }
 
 .testbg {
-  background-color: #f0ebdf;
+  background-image: url('./spiration-light.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .test-container {

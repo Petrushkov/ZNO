@@ -3,6 +3,7 @@
   width: 50vw;
   padding: 15px;
   margin-top: 20px;
+  background-color: #ffffff;
   border: 1px solid #000515;
 
   &__counter {

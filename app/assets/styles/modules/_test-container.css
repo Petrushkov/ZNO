@@ -1,5 +1,7 @@
 .testbg {
-  background-color: #f0ebdf;
+  background-image: url('./spiration-light.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .test-container {
   padding: 20px;
