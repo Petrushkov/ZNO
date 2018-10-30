@@ -4,39 +4,39 @@ const tests = [
     questions: [
       {
         id: 1,
-        right_answer: 3,
+        rightAnswer: 2,
       },
       {
         id: 2,
-        right_answer: 1,
+        rightAnswer: 0,
       },
       {
         id: 3,
-        right_answer: 5,
+        rightAnswer: 4,
       },
       {
         id: 4,
-        right_answer: 4,
+        rightAnswer: 3,
       },
       {
         id: 5,
-        right_answer: 4,
+        rightAnswer: 3,
       },
       {
         id: 6,
-        right_answer: 2,
+        rightAnswer: 1,
       },
       {
         id: 7,
-        right_answer: 5,
+        rightAnswer: 4,
       },
       {
         id: 8,
-        right_answer: 1,
+        rightAnswer: 0,
       },
       {
         id: 9,
-        right_answer: 5,
+        rightAnswer: 4,
       },
     ],
   },
@@ -45,27 +45,27 @@ const tests = [
     questions: [
       {
         id: 1,
-        right_answer: 1,
+        rightAnswer: 1,
       },
       {
         id: 1,
-        right_answer: 1,
+        rightAnswer: 1,
       },
       {
         id: 1,
-        right_answer: 1,
+        rightAnswer: 1,
       },
       {
         id: 1,
-        right_answer: 1,
+        rightAnswer: 1,
       },
       {
         id: 1,
-        right_answer: 1,
+        rightAnswer: 1,
       },
       {
         id: 1,
-        right_answer: 1,
+        rightAnswer: 1,
       },
     ],
   },
@@ -74,27 +74,27 @@ const tests = [
     questions: [
       {
         id: 1,
-        right_answer: 1,
+        rightAnswer: 1,
       },
       {
         id: 1,
-        right_answer: 1,
+        rightAnswer: 1,
       },
       {
         id: 1,
-        right_answer: 1,
+        rightAnswer: 1,
       },
       {
         id: 1,
-        right_answer: 1,
+        rightAnswer: 1,
       },
       {
         id: 1,
-        right_answer: 1,
+        rightAnswer: 1,
       },
       {
         id: 1,
-        right_answer: 1,
+        rightAnswer: 1,
       },
     ],
   },

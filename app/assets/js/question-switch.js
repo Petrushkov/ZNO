@@ -5,29 +5,60 @@ function TestSlider(questions) {
   const answerButton = document.getElementById('answer-button');
   const checkboxes = document.getElementsByClassName('answers__choice');
   const radioContainer = document.querySelector('.answers');
-  let questionCounter = 1;
+  const finishTestButton = document.getElementById('finish-test');
+  let questionCounter = 0;
 
   let numberOfRightAnswers = 0;
   let answers = [];
 
+  this.addChecked = id => {
+    let isCheckedAlredy = false;
+    let checkedBox = 0;
+    answers.forEach(el => {
+      if(el.id == id) {
+        isCheckedAlredy = true;
+        checkedBox = el.answer;
+      }
+    });
+
+    if(isCheckedAlredy) {
+      setTimeout(function() {
+        checkboxes[checkedBox].checked = true;
+      }, 200);
+    }
+  }
 
   this.goToQuestionAtId = id => {
-    if (id > questions.length) {
-      id = 1;
+    if (id >= questions.length) {
+      id = 0;
     }
     questionCounter = id;
-    counter.innerText = `Вопрос ${id} из ${questions.length}`;
+    this.addChecked(id);
+    counter.innerText = `Вопрос ${+id + 1} из ${questions.length}`;
     image.setAttribute('src', `./assets/images/q-${id}.png`);
   };
 
   this.plusQuestion = () => {
-    this.goToQuestionAtId(questionCounter);
+    this.goToQuestionAtId(++questionCounter);
   };
+
+  this.findItemIndex = (id) => {
+    let indexFound = -1;
+    answers.forEach( (el, index) => {
+      if(el.id === +id) {
+        indexFound = index;
+      }
+    });
+
+    return indexFound;
+  }
 
   this.initializeListeners = () => {
     questionContainer.addEventListener('click', e => {
       e.preventDefault();
       this.goToQuestionAtId(e.target.id);
+
+      this.clearBoxes();
     });
 
     window.addEventListener('load', () => {
@@ -39,17 +70,45 @@ function TestSlider(questions) {
         return;
       }
       e.preventDefault();
-      const radioAnswers = Array.from(radioContainer.children );
-      console.log(radioAnswers);
+      [].forEach.call(checkboxes, (el, index) => {
+        if (el.checked) {
+          let checkedIndex = this.findItemIndex(questionCounter);
+          console.log('index', checkedIndex);
+          if(checkedIndex !== -1) {
+            answers[checkedIndex] = {
+              id:+questionCounter,
+              answer: index
+            }
+          } else {
+            answers.push({ 
+              id: +questionCounter,
+              answer: index
+            });
+          }
+        }
+      });
 
       questionCounter++;
-      this.clearBoxes();
       this.goToQuestionAtId(questionCounter);
+      this.clearBoxes();
       answerButton.disabled = true;
+
+
+      console.log(answers);
     });
 
     radioContainer.addEventListener('click', e => {
       this.activateAnswerButton('answer-button');
+    });
+
+    finishTestButton.addEventListener('click', e => {
+      answers.forEach(el => {
+        if(el.answer === questions[el.id].rightAnswer) {
+          numberOfRightAnswers++;
+        }
+      });
+      
+      document.querySelector('.hero-container__heading').innerText = `Количество правильных ответов: ${numberOfRightAnswers}`;
     });
   };
 

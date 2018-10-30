@@ -53,6 +53,7 @@
     display: inline-block;
     width: 100%;
     padding: 15px 0;
+    border-bottom: 2px solid transparent;
 
     &:hover {
       border-bottom: 2px solid #ea8859;

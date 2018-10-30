@@ -32,31 +32,31 @@
       <h2 class="hero-container__heading">Онлайн тест по математиці</h2>
       <ul class="test-nav">
         <li class="test-nav__item">
-          <a href="" class="test-nav__link" id='1'>1</a>
+          <a href="" class="test-nav__link" id='0'>1</a>
         </li>
         <li class="test-nav__item">
-          <a href="" class="test-nav__link" id='2'>2</a>
+          <a href="" class="test-nav__link" id='1'>2</a>
         </li>
         <li class="test-nav__item">
-          <a href="" class="test-nav__link" id='3'>3</a>
+          <a href="" class="test-nav__link" id='2'>3</a>
         </li>
         <li class="test-nav__item">
-          <a href="" class="test-nav__link" id='4'>4</a>
+          <a href="" class="test-nav__link" id='3'>4</a>
         </li>
         <li class="test-nav__item">
-          <a href="" class="test-nav__link" id='5'>5</a>
+          <a href="" class="test-nav__link" id='4'>5</a>
         </li>
         <li class="test-nav__item">
-          <a href="" class="test-nav__link" id='6'>6</a>
+          <a href="" class="test-nav__link" id='5'>6</a>
         </li>
         <li class="test-nav__item">
-          <a href="index.html" class="test-nav__link" id='7'>7</a>
+          <a href="index.html" class="test-nav__link" id='6'>7</a>
         </li>
         <li class="test-nav__item">
-          <a href="" class="test-nav__link" id='8'>8</a>
+          <a href="" class="test-nav__link" id='7'>8</a>
         </li>
         <li class="test-nav__item">
-          <a href="" class="test-nav__link" id='9'>9</a>
+          <a href="" class="test-nav__link" id='8'>9</a>
         </li>
 
         <!-- <li class="test-nav__item">
@@ -125,42 +125,44 @@
       </ul>
 
       <div class="questions">
-        <div class="questions__counter">Вопрос 1 з
+        <div class="questions__counter">
         </div>
-        <img class="questions__image js-slide-1" src="./assets/images/q-1.png" alt="Перше запитання">
+        <img class="questions__image js-slide-1" src="./assets/images/q-0.png" alt="Перше запитання">
         <div class="questions__hint"> Відповіді:</div>
         <div class="answers">
-          <input class="answers__choice" type="radio" name="chooseone" id='ans-1' value="1">
+          <input class="answers__choice" type="radio" name="chooseone" id='ans-0' value="1">
+          <label class="answers__label" for='ans-0'>
+            <span class="answers__choice-custom"></span>
+          </label>
+
+          <input class="answers__choice" type="radio" name="chooseone" id='ans-1' value="2">
           <label class="answers__label" for='ans-1'>
             <span class="answers__choice-custom"></span>
           </label>
 
-          <input class="answers__choice" type="radio" name="chooseone" id='ans-2' value="2">
+          <input class="answers__choice" type="radio" name="chooseone" id='ans-2' value="3">
           <label class="answers__label" for='ans-2'>
             <span class="answers__choice-custom"></span>
           </label>
 
-          <input class="answers__choice" type="radio" name="chooseone" id='ans-3' value="3">
+          <input class="answers__choice" type="radio" name="chooseone" id='ans-3' value="4">
           <label class="answers__label" for='ans-3'>
             <span class="answers__choice-custom"></span>
           </label>
 
-          <input class="answers__choice" type="radio" name="chooseone" id='ans-4' value="4">
+          <input class="answers__choice" type="radio" name="chooseone" id='ans-4' value="5">
           <label class="answers__label" for='ans-4'>
-            <span class="answers__choice-custom"></span>
-          </label>
-
-          <input class="answers__choice" type="radio" name="chooseone" id='ans-5' value="5">
-          <label class="answers__label" for='ans-5'>
             <span class="answers__choice-custom"></span>
           </label>
         </div>
 
         <div class="questions__submit js-questions-submit">
           <button class="btn questions__answer questions__answer_passsive" id='answer-button' disabled href="#">Відповісти</button>
-          <a class="btn btn-full" href="#">Завершити тест</a>
+          <a class="btn btn-full" id='finish-test' href="#">Завершити тест</a>
         </div>
       </div>
+
+      
     </div>
   </div>
   <div class="section-social-media">
