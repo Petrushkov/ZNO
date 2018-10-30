@@ -40,10 +40,13 @@
 .footer-list {
   flex-basis: 40%;
   padding: 0;
+  flex-wrap: wrap;
   list-style: none;
   display: flex;
   justify-content: space-evenly;
-
+  &__block {
+    width: 40%;
+  }
   &_small {
     flex-basis: 30%;
     width: 50%;

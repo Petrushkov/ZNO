@@ -566,37 +566,95 @@ input[type='submit']:active {
   border: 2px solid #252c3f;
 }
 
-.main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background: #f0ebdf;
+/* TOP NAVIGATION */
+
+.main-list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  display: none;
 }
 
-.main-nav__item {
-    -ms-flex-preferred-size: 15%;
-        flex-basis: 15%;
-    padding: 10px 0;
-    text-align: center;
-    border-bottom: 2px solid transparent;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+@media (min-width: 480px) {
+
+.main-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
   }
 
-.main-nav__item:hover {
+.main-list_mobile {
+    display: block;
+  }
+
+.main-list__button {
+    position: relative;
+    background: rgba(238, 238, 238, 0.445);
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 300;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: 999;
+    border-right: 1px solid rgb(213, 213, 213);
+  }
+
+@media (min-width: 768px) {
+
+.main-list__button {
+      font-size: 0.9rem
+  }
+  }
+
+@media (min-width: 1075px) {
+
+.main-list__button {
+      font-size: 1rem
+  }
+  }
+
+.main-list__button:nth-child(1) {
+    margin-top: 0;
+    padding: 0;
+  }
+
+.main-list__button:last-child {
+    border-right: none;
+  }
+
+@media (min-width: 480px) {
+
+.main-list__button:hover {
+      background: rgb(201, 201, 201)
+  }
+  }
+
+.main-list__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+.main-list__link:hover {
       border-bottom: 2px solid #ea8859;
     }
 
-.main-nav__link {
-    text-transform: uppercase;
-  }
-
 .slideshow-container {
   position: relative;
-  margin: 5px auto;
+  margin: 0px auto;
   height: 70vh;
 }
 
@@ -613,26 +671,26 @@ input[type='submit']:active {
   -webkit-animation: fade 1.1s forwards;
           animation: fade 1.1s forwards;
   width: 100%;
-  background-image: url('img-1.jpg');
+  background-image: url('./img-1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slide_hero {
-    height: 70vh;
+    height: 72.7vh;
   }
 
 @media (min-width: 480px) {
 
 .slide_hero {
-      height: 40vh
+      height: 72.7vh
   }
   }
 
 @media (min-width: 768px) {
 
 .slide_hero {
-      height: 55vh
+      height: 72.7vh
   }
   }
 
@@ -723,7 +781,7 @@ input[type='submit']:active {
 .hero-container__heading {
     font-size: 2rem;
     font-weight: bold;
-    color: #000515;
+    color: #252c3f;
     width: 80%;
     margin: 0 auto 25px auto;
   }
@@ -786,12 +844,16 @@ input[type='submit']:active {
     text-transform: uppercase;
   }
 
+.test-nav .test-nav__item:not(:nth-child(1)) {
+  border-left: 0;
+}
+
 .questions {
   position: relative;
   width: 50vw;
   padding: 15px;
   margin-top: 20px;
-  border: 2px solid black;
+  border: 1px solid #000515;
 }
 
 .questions__counter {
@@ -851,6 +913,10 @@ input[type='submit']:active {
     -webkit-transition: background-color 0.4s linear;
     transition: background-color 0.4s linear;
   }
+
+.testbg {
+  background-color: #f0ebdf;
+}
 
 .test-container {
   padding: 20px;
@@ -918,6 +984,8 @@ input[type='submit']:active {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
   padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -926,6 +994,10 @@ input[type='submit']:active {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+
+.footer-list__block {
+    width: 40%;
+  }
 
 .footer-list_small {
     -ms-flex-preferred-size: 30%;
@@ -1065,6 +1137,7 @@ input[type='submit']:active {
   font-weight: 300;
   font-size: 1.2rem;
   margin: 10px 0 0 0;
+  text-align: center;
 }
 
 @media (min-width: 480px) {
@@ -1102,7 +1175,7 @@ input[type='submit']:active {
           justify-content: space-evenly;
   text-align: center;
   padding: 0;
-  margin: 0;
+  margin: 10px 0 0 0;
 }
 
 .media-link {
@@ -1389,4 +1462,21 @@ input[type='submit']:active {
 
 .section-heading_plans::after {
     background: white;
+  }
+
+.burger-nav {
+  display: block;
+  height: 30px;
+  width: 100%;
+  background: url('./hamburger-btn.png') no-repeat 98% center;
+  background-size: contain;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+@media (min-width: 480px) {
+
+.burger-nav {
+    display: none
+}
   }

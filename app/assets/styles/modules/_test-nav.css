@@ -15,10 +15,12 @@
       background-color: #252c3f;
     }
   }
-
   &__link {
     display: block;
     padding: 10px;
     text-transform: uppercase;
   }
+}
+.test-nav .test-nav__item:not(:nth-child(1)) {
+  border-left: 0;
 }
