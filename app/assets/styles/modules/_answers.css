@@ -1,0 +1,22 @@
+.answers {
+  &__choice {
+    display: none;
+  }
+
+  &__choice + &__label &__choice-custom {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    -moz-border-radius: 20%;
+    border-radius: 20%;
+    border: 1px solid #000515;
+  }
+
+  &__choice:checked + &__label &__choice-custom {
+    background: #252c3f;
+    transition: background-color 0.4s linear;
+  }
+}

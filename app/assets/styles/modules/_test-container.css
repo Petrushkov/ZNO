@@ -1,0 +1,21 @@
+.testbg {
+  background-image: url('./spiration-light.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.test-container {
+  height: 100vh;
+  padding: 1px 20px;
+  width: 60vw;
+  @mixin atSmall {
+    height: 65vh;
+  }
+
+  @mixin atMedium {
+    height: 55vh;
+  }
+
+  @mixin atLarge {
+    height: 92.3vh;
+  }
+}

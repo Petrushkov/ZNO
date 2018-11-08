@@ -1,0 +1,169 @@
+/* FEATURES */
+
+.features-section {
+  position: relative;
+  display: block;
+  text-align: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: rgb(250, 250, 250);
+
+  &__subheading {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+}
+
+.feature-container {
+  @mixin atMedium {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  align-items: stretch;
+}
+
+.feature {
+  text-align: center;
+  padding: 1% 0;
+  flex: 1;
+
+  @mixin atSmall {
+    padding: 2% 1%;
+  }
+
+  @mixin atMedium {
+    padding: 3% 2%;
+  }
+
+  @mixin atLarge {
+    padding: 5% 4%;
+  }
+
+  &__image {
+    max-width: 300px;
+    border-radius: 5px;
+  }
+
+  &__image_contacts {
+    max-width: 100%;
+    border-radius: 0;
+    @mixin atSmall {
+      max-width: 400px;
+      border-radius: 5px;
+    }
+
+    @mixin atMedium {
+      max-width: 90%;
+    }
+
+    @mixin atLarge {
+      max-width: 300px;
+    }
+  }
+
+  &__heading {
+    color: black;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 300;
+
+    @mixin atSmall {
+      font-size: 1.5rem;
+    }
+
+    @mixin atMedium {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__description {
+    line-height: 145%;
+    word-spacing: 2px;
+    font-size: 1rem;
+    color: black;
+
+    @mixin atSmall {
+      font-size: 1.1rem;
+    }
+
+    @mixin atMedium {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__icon {
+    font-size: 3rem;
+    color: #eb7f00;
+    font-weight: 100;
+  }
+
+  &_less-padding {
+    padding: 0 0 6% 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #eb7f00;
+    transition: all 1s;
+  }
+
+  &__link:hover {
+    color: #e6791a;
+  }
+
+  &__link:hover > span {
+    padding-left: 10px;
+  }
+
+  &__link_small {
+    font-size: 0.9rem;
+  }
+}
+
+.section-heading {
+  text-transform: uppercase;
+  word-spacing: 2px;
+  letter-spacing: 5px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 0;
+  padding: 10px 0;
+  font-size: 1.5rem;
+
+  &_plans {
+    font-weight: 400;
+  }
+
+  @mixin atSmall {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 2rem;
+  }
+
+  @mixin atMedium {
+    font-size: 3rem;
+    padding: 40px 0;
+  }
+
+  @mixin atLarge {
+    font-size: 3.5rem;
+  }
+
+  &::after,
+  &_plans::after {
+    display: block;
+    content: '';
+    background: #eb7f00;
+    height: 2px;
+    width: 300px;
+    margin: 20px auto 0 auto;
+  }
+
+  &_plans::after {
+    background: white;
+  }
+}
