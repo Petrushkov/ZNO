@@ -35,7 +35,7 @@ function TestSlider(questions) {
     questionCounter = id;
     this.addChecked(id);
     counter.innerText = `Вопрос ${+id + 1} из ${questions.length}`;
-    image.setAttribute('src', `./assets/images/q-${id}.png`);
+    image.setAttribute('src', `./assets/images/2018/q-${id}.png`);
   };
 
   this.plusQuestion = () => {

@@ -1,0 +1,35 @@
+.main-test {
+  width: 70vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    flex-basis: 50%;
+    padding: 5px;
+  }
+  &__link {
+    display: inline-block;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    border: 1px solid #000515;
+    text-align: center;
+    transition: all 0.3s;
+
+    @mixin atSmall {
+      padding: 10px 30px;
+    }
+
+    @mixin atMedium {
+      padding: 10px 35px;
+    }
+
+    @mixin atLarge {
+      padding: 15px 45px;
+    }
+
+    &:hover {
+      background-color: #252c3f;
+    }
+  }
+}

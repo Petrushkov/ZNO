@@ -18,4 +18,7 @@
   @mixin atLarge {
     height: 92.3vh;
   }
+  &_small {
+    height: 75vh;
+  }
 }

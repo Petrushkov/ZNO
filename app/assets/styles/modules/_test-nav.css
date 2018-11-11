@@ -1,12 +1,14 @@
 .test-nav {
-  width: 40vh;
+  width: 50vw;
+  height: 100px;
   display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
   justify-content: space-between;
   background: #f0ebdf;
 
   &__item {
-    flex-basis: 30%;
-
+    flex-basis: 6.5%;
     border: 1px solid #000515;
     text-align: center;
     transition: all 0.3s;
@@ -20,7 +22,4 @@
     padding: 10px;
     text-transform: uppercase;
   }
-}
-.test-nav .test-nav__item:not(:nth-child(1)) {
-  border-left: 0;
 }

@@ -20,7 +20,7 @@
     background: rgba(238, 238, 238, 0.445);
     flex: 1;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-weight: 300;
     transition: all 0.5s;
     z-index: 999;
@@ -41,11 +41,39 @@
   &__button:last-child {
     border-right: none;
   }
-  &__button:hover {
+
+  &__button:hover &__button_inside {
     @mixin atSmall {
-      background: rgb(201, 201, 201);
+      display: block;
     }
   }
+  &__button_inside {
+    display: none;
+    padding: 10px 20px !important;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+
+  &__button_inside:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  &__drop-menu {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: none;
+
+    @mixin atSmall {
+      display: block;
+    }
+  }
+
   &__link {
     text-decoration: none;
     text-transform: uppercase;

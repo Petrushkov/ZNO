@@ -78,6 +78,50 @@ const tests = [
         id: 19,
         rightAnswer: 0,
       },
+      {
+        id: 20,
+        rightAnswer: 1,
+      },
+      {
+        id: 21,
+        rightAnswer: 1,
+      },
+      {
+        id: 22,
+        rightAnswer: 1,
+      },
+      {
+        id: 23,
+        rightAnswer: 1,
+      },
+      {
+        id: 24,
+        rightAnswer: 1,
+      },
+      {
+        id: 25,
+        rightAnswer: 1,
+      },
+      {
+        id: 26,
+        rightAnswer: 1,
+      },
+      {
+        id: 27,
+        rightAnswer: 1,
+      },
+      {
+        id: 28,
+        rightAnswer: 1,
+      },
+      {
+        id: 29,
+        rightAnswer: 1,
+      },
+      {
+        id: 30,
+        rightAnswer: 1,
+      },
     ],
   },
   {
