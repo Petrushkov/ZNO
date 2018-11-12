@@ -973,6 +973,10 @@ input[type='submit']:active {
     transition: background-color 0.4s linear;
   }
 
+.answers-multiple {
+  display: none;
+}
+
 .testbg {
   background-image: url('./spiration-light.png');
   background-repeat: no-repeat;

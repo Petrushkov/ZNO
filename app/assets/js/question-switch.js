@@ -1,10 +1,11 @@
-function TestSlider(questions) {
+function TestSlider(questions, pageId) {
   const questionContainer = document.querySelector('.test-nav');
   const counter = document.querySelector('.questions__counter');
   const image = document.querySelector('.questions__image');
   const answerButton = document.getElementById('answer-button');
   const checkboxes = document.getElementsByClassName('answers__choice');
   const radioContainer = document.querySelector('.answers');
+  const multipleRadioContainer = document.querySelector('.answers-multiple');
   const finishTestButton = document.getElementById('finish-test');
   let questionCounter = 0;
 
@@ -33,9 +34,16 @@ function TestSlider(questions) {
       id = 0;
     }
     questionCounter = id;
+    if(questionCounter >= 20 && questionCounter <= 23) {
+      radioContainer.style.display = 'none';
+      multipleRadioContainer.style.display = 'block';
+    } else {
+      radioContainer.style.display = 'block';
+      multipleRadioContainer.style.display = 'none';
+    }
     this.addChecked(id);
     counter.innerText = `Вопрос ${+id + 1} из ${questions.length}`;
-    image.setAttribute('src', `./assets/images/2018/q-${id}.png`);
+    image.setAttribute('src', `./assets/images/${pageId}/q-${id}.png`);
   };
 
   this.plusQuestion = () => {
@@ -52,6 +60,7 @@ function TestSlider(questions) {
 
     return indexFound;
   };
+
 
   this.initializeListeners = () => {
     questionContainer.addEventListener('click', e => {
@@ -73,7 +82,6 @@ function TestSlider(questions) {
       [].forEach.call(checkboxes, (el, index) => {
         if (el.checked) {
           let checkedIndex = this.findItemIndex(questionCounter);
-          console.log('index', checkedIndex);
           if (checkedIndex !== -1) {
             answers[checkedIndex] = {
               id: +questionCounter,
@@ -93,7 +101,6 @@ function TestSlider(questions) {
       this.clearBoxes();
       answerButton.disabled = true;
 
-      console.log(answers);
     });
 
     radioContainer.addEventListener('click', e => {
